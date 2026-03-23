@@ -52,7 +52,7 @@ export default function AIAssistant() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 11, padding: '13px 16px', borderBottom: '.5px solid rgba(99,102,241,.18)', background: 'rgba(99,102,241,.06)' }}>
           <div style={{ width: 34, height: 34, borderRadius: '50%', background: 'linear-gradient(135deg,var(--p),var(--pk))', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 15, boxShadow: '0 0 10px rgba(99,102,241,.45)' }}>🤖</div>
           <div>
-            <div style={{ fontFamily: 'var(--orb)', fontSize: 11, fontWeight: 700, color: '#fff' }}>ARJUN·AI</div>
+            <div style={{ fontFamily: 'var(--orb)', fontSize: 11, fontWeight: 700, color: '#fff' }}>KUNGA·AI</div>
             <div style={{ fontSize: 11, color: 'rgba(200,220,255,.45)', display: 'flex', alignItems: 'center', gap: 5 }}>
               <span style={{ display: 'inline-block', width: 5, height: 5, borderRadius: '50%', background: '#22c55e', boxShadow: '0 0 5px #22c55e' }} />
               Online
