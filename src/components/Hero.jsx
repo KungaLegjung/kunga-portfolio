@@ -82,12 +82,13 @@ export default function Hero() {
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', animation: 'fadeUp .7s .5s ease both' }}>
             {/* ── Resume download: place your resume.pdf in /public ── */}
             <a
-              href="/KLResume.pdf"
-              download="Kunga_Legjung_Resume.pdf"
-              style={{ textDecoration: 'none' }}
-            >
-              <button className="btn-primary">⬇ DOWNLOAD RESUME</button>
-            </a>
+                href="/KLResume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: 'none' }}
+              >
+                <button className="btn-primary">👁 VIEW RESUME</button>
+              </a>
             <button className="btn-outline" onClick={() => scrollTo('contact')}>
               HIRE ME
             </button>
