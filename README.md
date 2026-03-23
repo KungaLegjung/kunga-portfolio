@@ -42,7 +42,7 @@ src/
 
 ## 🔧 Personalisation
 
-### 1. Your Details
+### 1. My Details
 Edit **`src/data/index.js`** — all content is in one place:
 - Name, roles, tags
 - Education, Experience, Projects
