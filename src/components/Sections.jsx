@@ -6,7 +6,7 @@ import { EDUCATION, EXPERIENCE, SKILL_CATEGORIES } from '../data/index.js';
 /* ── ABOUT ──────────────────────────────────────────────────────────────── */
 export function About() {
   const STATS = [
-    { num: '15+', lbl: 'Projects Built',       c: 'var(--c)'  },
+    { num: '4', lbl: 'Projects Built',       c: 'var(--c)'  },
     { num: '3+',  lbl: 'Years Coding',          c: 'var(--p)'  },
     { num: '3',   lbl: 'Internships Done',      c: 'var(--pk)' },
     { num: '8+',  lbl: 'Technologies Mastered', c: 'var(--g)'  },
