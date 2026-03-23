@@ -87,7 +87,7 @@ export default function Hero() {
                 rel="noreferrer"
                 style={{ textDecoration: 'none' }}
               >
-                <button className="btn-primary">👁 VIEW RESUME</button>
+                <button className="btn-primary">VIEW RESUME</button>
               </a>
             <button className="btn-outline" onClick={() => scrollTo('contact')}>
               HIRE ME
