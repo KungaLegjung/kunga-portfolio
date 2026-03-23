@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# 🚀 Arjun Sharma — Futuristic MCA Portfolio
+# 🚀 Kunga Legjung — Futuristic MCA Portfolio
 
 A fully animated, React + Vite portfolio with futuristic anime aesthetics,
 interactive particle backgrounds per section, real skill logos, and EmailJS contact.
