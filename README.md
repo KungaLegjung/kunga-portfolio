@@ -131,5 +131,5 @@ Fonts: **Orbitron** (headings) · **Share Tech Mono** (labels) · **Exo 2** (bod
 | lucide-react        | Icons (optional)       |
 | vite                | Build tool             |
 =======
-# kunga-portfolio
+
 >>>>>>> 0fb5a289a3489bb0a72c2e71402172f0c2eef740
