@@ -44,6 +44,7 @@ export function Cursor() {
 /* ── NAVBAR ─────────────────────────────────────────────────────────────── */
 export function Navbar({ active }) {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 40);
@@ -56,28 +57,57 @@ export function Navbar({ active }) {
   };
 
   return (
-    <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
-      <span className="nav-logo" onClick={() => scrollTo('home')}>
-        KU<em>N</em>GA
-      </span>
+    <>
+      <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
+        <span className="nav-logo" onClick={() => scrollTo('home')}>
+          KU<em>N</em>GA
+        </span>
 
-      <ul className="nav-links">
-        {NAV_ITEMS.map(n => (
-          <li key={n.id}>
+        <ul className="nav-links">
+          {NAV_ITEMS.map(n => (
+            <li key={n.id}>
+              <button
+                className={`nav-link${active === n.id ? ' active' : ''}`}
+                onClick={() => scrollTo(n.id)}
+              >
+                {n.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        <button className="btn-hire" onClick={() => scrollTo('contact')}>
+          HIRE ME
+        </button>
+
+        {/* Hamburger — mobile only */}
+        <button
+          className={`nav-hamburger${menuOpen ? ' open' : ''}`}
+          onClick={() => setMenuOpen(o => !o)}
+          aria-label="Toggle menu"
+        >
+          <span /><span /><span />
+        </button>
+      </nav>
+
+      {/* Mobile drawer */}
+      {menuOpen && (
+        <div className="nav-mobile open">
+          {NAV_ITEMS.map(n => (
             <button
+              key={n.id}
               className={`nav-link${active === n.id ? ' active' : ''}`}
-              onClick={() => scrollTo(n.id)}
+              onClick={() => { scrollTo(n.id); setMenuOpen(false); }}
             >
               {n.label}
             </button>
-          </li>
-        ))}
-      </ul>
-
-      <button className="btn-hire" onClick={() => scrollTo('contact')}>
-        HIRE ME
-      </button>
-    </nav>
+          ))}
+          <button className="btn-hire" onClick={() => { scrollTo('contact'); setMenuOpen(false); }}>
+            HIRE ME
+          </button>
+        </div>
+      )}
+    </>
   );
 }
 
