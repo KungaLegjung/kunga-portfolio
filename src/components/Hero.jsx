@@ -82,7 +82,7 @@ export default function Hero() {
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', animation: 'fadeUp .7s .5s ease both' }}>
             {/* ── Resume download: place your resume.pdf in /public ── */}
             <a
-              href="/KungaLegjung.pdf"
+              href="/KLResume.pdf"
               download="Kunga_Legjung_Resume.pdf"
               style={{ textDecoration: 'none' }}
             >
