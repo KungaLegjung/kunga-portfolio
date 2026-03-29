@@ -47,15 +47,20 @@ export default function Hero() {
         backgroundSize: '60px 60px',
       }} />
 
-      <div className="hero-inner">
+      <div style={{
+        position: 'relative', zIndex: 2,
+        width: '100%', maxWidth: 1200,
+        margin: '0 auto', padding: '80px 64px',
+        display: 'flex', alignItems: 'center', gap: 80, flexWrap: 'wrap',
+      }}>
 
         {/* ── LEFT ── */}
-        <div className="hero-left">
+        <div style={{ flex: 1, minWidth: 300 }}>
           <div style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: 6, color: 'var(--c)', opacity: .65, marginBottom: 22, animation: 'fadeUp .6s ease both' }}>
             &gt;_ INITIALIZING PORTFOLIO.exe
           </div>
 
-          <h1 style={{ fontFamily: 'var(--orb)', fontSize: 'clamp(32px,5.5vw,72px)', fontWeight: 900, lineHeight: 1.05, marginBottom: 14, animation: 'fadeUp .7s .1s ease both' }}>
+          <h1 style={{ fontFamily: 'var(--orb)', fontSize: 'clamp(38px,5.5vw,72px)', fontWeight: 900, lineHeight: 1.05, marginBottom: 14, animation: 'fadeUp .7s .1s ease both' }}>
             <GlitchText text="KUNGA" /><br />
             <span style={{ color: 'var(--pk)', textShadow: '0 0 20px var(--pk), 0 0 40px rgba(255,45,120,.28)' }}>LEGJUNG</span>
           </h1>
@@ -75,8 +80,13 @@ export default function Hero() {
           </div>
 
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', animation: 'fadeUp .7s .5s ease both' }}>
-            <a href="/KLResume.pdf" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
-              <button className="btn-primary">VIEW RESUME</button>
+            {/* ── Resume download: place your resume.pdf in /public ── */}
+            <a
+              href="/resume.pdf"
+              download="Kunga_Legjung_Resume.pdf"
+              style={{ textDecoration: 'none' }}
+            >
+              <button className="btn-primary">⬇ DOWNLOAD RESUME</button>
             </a>
             <button className="btn-outline" onClick={() => scrollTo('contact')}>
               HIRE ME
@@ -85,56 +95,59 @@ export default function Hero() {
         </div>
 
         {/* ── RIGHT — Profile ── */}
-        <div className="hero-right">
-          <div style={{ position: 'relative', animation: 'float 4s ease-in-out infinite', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            {/* Rotating rings */}
-            {[
-              { s: 260, dur: '12s', c: 'rgba(56,189,248,0.22)', dir: 'spin' },
-              { s: 310, dur: '19s', c: 'rgba(129,140,248,0.16)', dir: 'spinR' },
-              { s: 358, dur: '27s', c: 'rgba(244,63,94,0.10)', dir: 'spin' },
-            ].map((r, i) => (
-              <div key={i} style={{
-                position: 'absolute', top: '50%', left: '50%',
-                width: r.s, height: r.s,
-                marginTop: -r.s / 2, marginLeft: -r.s / 2,
-                borderRadius: '50%', border: `1px solid ${r.c}`,
-                animation: `${r.dir} ${r.dur} linear infinite`,
-                pointerEvents: 'none',
-              }}>
-                <div style={{ position: 'absolute', top: -4, left: '50%', width: 8, height: 8, marginLeft: -4, borderRadius: '50%', background: r.c.replace('0.28', '0.9').replace('0.18', '0.9').replace('0.12', '0.9'), boxShadow: `0 0 14px ${r.c}` }} />
-              </div>
-            ))}
-
-            {/* Profile circle */}
-            <div className="hero-avatar">
-              {PROFILE_IMG
-                ? <img src={PROFILE_IMG} alt="Kunga Legjung" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                : (
-                  <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg,#050f20 0%,#0a1a3a 50%,#050f20 100%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
-                    <div style={{ fontSize: 68 }}>👨‍💻</div>
-                    <span style={{ fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: 3, color: 'rgba(56,189,248,.35)' }}>YOUR PHOTO</span>
-                  </div>
-                )
-              }
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,transparent 40%,rgba(56,189,248,.04) 50%,transparent 60%)', animation: 'scanline 3s linear infinite' }} />
+        <div style={{ position: 'relative', flexShrink: 0, animation: 'float 4s ease-in-out infinite', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          {/* Rotating rings */}
+          {[
+            { s: 310, dur: '12s', c: 'rgba(56,189,248,0.22)', dir: 'spin' },
+            { s: 370, dur: '19s', c: 'rgba(129,140,248,0.16)',  dir: 'spinR' },
+            { s: 428, dur: '27s', c: 'rgba(244,63,94,0.10)', dir: 'spin' },
+          ].map((r, i) => (
+            <div key={i} style={{
+              position: 'absolute', top: '50%', left: '50%',
+              width: r.s, height: r.s,
+              marginTop: -r.s / 2, marginLeft: -r.s / 2,
+              borderRadius: '50%', border: `1px solid ${r.c}`,
+              animation: `${r.dir} ${r.dur} linear infinite`,
+              pointerEvents: 'none',
+            }}>
+              <div style={{ position: 'absolute', top: -4, left: '50%', width: 8, height: 8, marginLeft: -4, borderRadius: '50%', background: r.c.replace('0.28', '0.9').replace('0.18', '0.9').replace('0.12', '0.9'), boxShadow: `0 0 14px ${r.c}` }} />
             </div>
+          ))}
 
-            {/* Floating stat chips */}
-            {[
-              { label: 'CGPA', val: '8.53/10', style: { top: '5%', right: '-22%' },  c: 'var(--c)' },
-              { label: 'Projects', val: '4', style: { bottom: '18%', right: '-22%' }, c: 'var(--p)' },
-              { label: 'Internships', val: '3', style: { bottom: '4%', left: '-8%' }, c: 'var(--pk)' },
-            ].map((chip, i) => (
-              <div key={i} className="hero-chip" style={{
-                position: 'absolute', ...chip.style,
-                background: 'rgba(5,15,30,.92)', border: `.5px solid ${chip.c}`,
-                padding: '8px 14px', backdropFilter: 'blur(8px)',
-              }}>
-                <div style={{ fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: 2, color: chip.c, opacity: .7 }}>{chip.label}</div>
-                <div style={{ fontFamily: 'var(--orb)', fontSize: 17, fontWeight: 700, color: chip.c }}>{chip.val}</div>
-              </div>
-            ))}
+          {/* Profile circle */}
+          <div style={{
+            position: 'relative', width: 256, height: 256, borderRadius: '50%', overflow: 'hidden',
+            border: '2px solid rgba(56,189,248,0.35)',
+            boxShadow: '0 0 40px rgba(56,189,248,.14), 0 0 80px rgba(56,189,248,.05), inset 0 0 40px rgba(56,189,248,.03)',
+          }}>
+            {PROFILE_IMG
+              ? <img src={PROFILE_IMG} alt="Kunga Legjung" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              : (
+                <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg,#050f20 0%,#0a1a3a 50%,#050f20 100%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
+                  <div style={{ fontSize: 68 }}>👨‍💻</div>
+                  <span style={{ fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: 3, color: 'rgba(56,189,248,.35)' }}>YOUR PHOTO</span>
+                </div>
+              )
+            }
+            {/* Scan line */}
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,transparent 40%,rgba(56,189,248,.04) 50%,transparent 60%)', animation: 'scanline 3s linear infinite' }} />
           </div>
+
+          {/* Floating stat chips */}
+          {[
+            { label: 'CGPA', val: '8.53/10', style: { top: '5%', right: '-22%' },  c: 'var(--c)' },
+            { label: 'Projects', val: '4', style: { bottom: '18%', right: '-22%' }, c: 'var(--p)' },
+            { label: 'Internships', val: '3', style: { bottom: '4%', left: '-8%' }, c: 'var(--pk)' },
+          ].map((chip, i) => (
+            <div key={i} style={{
+              position: 'absolute', ...chip.style,
+              background: 'rgba(5,15,30,.92)', border: `.5px solid ${chip.c}`,
+              padding: '8px 14px', backdropFilter: 'blur(8px)',
+            }}>
+              <div style={{ fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: 2, color: chip.c, opacity: .7 }}>{chip.label}</div>
+              <div style={{ fontFamily: 'var(--orb)', fontSize: 17, fontWeight: 700, color: chip.c }}>{chip.val}</div>
+            </div>
+          ))}
         </div>
       </div>
 

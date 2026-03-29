@@ -6,18 +6,17 @@ import { EDUCATION, EXPERIENCE, SKILL_CATEGORIES } from '../data/index.js';
 /* ── ABOUT ──────────────────────────────────────────────────────────────── */
 export function About() {
   const STATS = [
-    { num: '4',  lbl: 'Projects Built',       c: 'var(--c)'  },
-    { num: '3+', lbl: 'Years Coding',          c: 'var(--p)'  },
-    { num: '3',  lbl: 'Internships Done',      c: 'var(--pk)' },
-    { num: '8+', lbl: 'Technologies Mastered', c: 'var(--g)'  },
+    { num: '15+', lbl: 'Projects Built',       c: 'var(--c)'  },
+    { num: '3+',  lbl: 'Years Coding',          c: 'var(--p)'  },
+    { num: '3',   lbl: 'Internships Done',      c: 'var(--pk)' },
+    { num: '8+',  lbl: 'Technologies Mastered', c: 'var(--g)'  },
   ];
   return (
     <section className="section" id="about">
       <ParticleBg type="nodes" />
       <div className="section-inner">
         <SecHeader num="// 00" title="ABOUT " hl="ME" />
-        {/* Use className instead of inline grid so media query can override */}
-        <div className="about-grid">
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }}>
           <GlassCard style={{ padding: 36 }} className="clip-all">
             <p style={{ fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: 4, color: 'var(--c)', marginBottom: 14, opacity: .6 }}>&gt;_ PROFILE.json</p>
             <p style={{ fontSize: 15, lineHeight: 1.9, color: 'rgba(200,220,255,.7)', marginBottom: 16 }}>
@@ -55,6 +54,7 @@ export function Education() {
         <div className="edu-grid">
           {EDUCATION.map((e, i) => (
             <GlassCard key={i} hoverColor={e.color} className="edu-card clip-tr" style={{ borderColor: `${e.color}28` }}>
+              {/* corner accent */}
               <div style={{ position: 'absolute', top: 0, right: 0, width: 20, height: 20, background: `${e.color}20`, clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }} />
               <div style={{ fontSize: 28, marginBottom: 10 }}>{e.icon}</div>
               <div style={{ fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: 3, color: e.color, marginBottom: 8 }}>{e.yr}</div>
@@ -116,10 +116,12 @@ export function Skills() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 52 }}>
           {SKILL_CATEGORIES.map((cat, ci) => (
             <div key={ci}>
+              {/* Category header */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 24 }}>
                 <span style={{ fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: 4, color: cat.color, opacity: .8 }}>// {cat.title.toUpperCase()}</span>
                 <div style={{ flex: 1, height: .5, background: `linear-gradient(90deg, ${cat.color}, transparent)`, opacity: .3 }} />
               </div>
+              {/* Skills grid */}
               <div className="skills-icon-grid">
                 {cat.skills.map((s, si) => (
                   <SkillLogo key={si} name={s.name} logo={s.logo} catColor={cat.color} />
