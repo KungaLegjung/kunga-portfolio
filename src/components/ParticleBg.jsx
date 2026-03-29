@@ -1,17 +1,5 @@
 import { useEffect, useRef } from 'react';
 
-/*
-  Simple, calm, interactive backgrounds — subtle depth, nothing distracting.
-
-  matrix   → Hero:       Slow fading code rain, low opacity
-  nodes    → About:      Floating dots connected by thin lines, mouse-reactive
-  circuit  → Education:  Faint grid with slow-pulsing dots
-  wave     → Skills:     Gentle sine waves drifting across
-  hex      → Experience: Faint hex outlines, softly pulsing
-  dna      → Projects:   Slow floating particles with connecting lines
-  stars    → Contact:    Quiet star field with subtle twinkle
-*/
-
 export default function ParticleBg({ type }) {
   const ref    = useRef(null);
   const mouse  = useRef({ x: -999, y: -999 });
