@@ -150,7 +150,7 @@ export const PROJECTS = [
     tech: ['Java', 'MySQL', 'RBAC', 'Session Management'],
     color: '#34d399',
     img: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80',
-    github: 'https://github.com/KungaLegjung',
+    github: 'https://github.com/KungaLegjung/Framework-for-Identification-and-Analysis-of-Tourist-Transport-Data.git',
     demo: '#',
   },
   {
@@ -160,7 +160,7 @@ export const PROJECTS = [
     tech: ['Power BI', 'DAX', 'Excel', 'Power Query'],
     color: '#818cf8',
     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
-    github: 'https://github.com/KungaLegjung',
+    github: 'https://github.com/KungaLegjung/Optimizing-IT-Support-Team-Performance-Using-Analytics.git',
     demo: '#',
   },
   {
@@ -170,7 +170,7 @@ export const PROJECTS = [
     tech: ['Power BI', 'DAX', 'Excel', 'Data Cleaning'],
     color: '#fbbf24',
     img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80',
-    github: 'https://github.com/KungaLegjung',
+    github: 'https://github.com/KungaLegjung/Sales-Analytics-Dashboard.git',
     demo: '#',
   },
 ];
