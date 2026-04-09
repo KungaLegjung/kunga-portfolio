@@ -161,7 +161,6 @@ export const PROJECTS = [
     color: '#818cf8',
     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
     github: 'https://github.com/KungaLegjung/Optimizing-IT-Support-Team-Performance-Using-Analytics.git',
-    demo: '#',
   },
   {
     title: 'Sales Analysis Dashboard',
@@ -171,7 +170,6 @@ export const PROJECTS = [
     color: '#fbbf24',
     img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80',
     github: 'https://github.com/KungaLegjung/Sales-Analytics-Dashboard.git',
-    demo: '#',
   },
   {
     title: 'NeoScan | AI Resume Analyzer',
