@@ -75,7 +75,7 @@ export default function Hero() {
           </div>
 
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', animation: 'fadeUp .7s .5s ease both' }}>
-            <a href="/Kungaresume.pdf" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+            <a href="/KungaLegjungCV.pdf" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
               <button className="btn-primary">VIEW RESUME</button>
             </a>
             <button className="btn-outline" onClick={() => scrollTo('contact')}>
