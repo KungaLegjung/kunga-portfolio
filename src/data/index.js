@@ -177,7 +177,7 @@ export const PROJECTS = [
     desc: 'Analysed 700K+ sales records across 4 years, surfacing regional and category-level trends with 10+ Power BI charts, KPI cards, and top-5 profit-driving product categories.',
     tech: ['Power BI', 'DAX', 'Excel', 'Data Cleaning'],
     color: '#FF0000',
-    img: '/Users/kungalegjung/Desktop/portfolio/src/data/resume.png',
+    img: './resume.png',
     github: 'https://github.com/KungaLegjung/neoscans.git',
     demo: 'https://neoscan.vercel.app',
   },
