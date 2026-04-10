@@ -13,7 +13,7 @@ export const NAV_ITEMS = [
 // devicons CDN: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/
 const D = (name, file = 'original') =>
   `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${name}/${name}-${file}.svg`;
-
+const neoscanImg = new URL('./resume.png', import.meta.url).href;
 export const SKILL_CATEGORIES = [
   {
     title: 'Frontend',
@@ -177,7 +177,7 @@ export const PROJECTS = [
     desc: 'Analysed 700K+ sales records across 4 years, surfacing regional and category-level trends with 10+ Power BI charts, KPI cards, and top-5 profit-driving product categories.',
     tech: ['Power BI', 'DAX', 'Excel', 'Data Cleaning'],
     color: '#FF0000',
-    img: './resume.png',
+    img: neoscanImg,
     github: 'https://github.com/KungaLegjung/neoscans.git',
     demo: 'https://neoscan.vercel.app',
   },
