@@ -75,6 +75,8 @@ function ProjectCard({ proj }) {
   const [hov, setHov]       = useState(false);
   const [imgErr, setImgErr] = useState(false);
 
+  const hasLive = proj.demo && proj.demo !== '#';
+
   return (
     <div
       className="proj-card glass-card clip-all"
@@ -162,7 +164,7 @@ function ProjectCard({ proj }) {
           {proj.tech.map(t => <TechPill key={t} label={t} />)}
         </div>
 
-        {/* ── Action buttons with real logos ── */}
+        {/* ── Action buttons ── */}
         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
           <ProjBtn
             href={proj.github}
@@ -170,12 +172,14 @@ function ProjectCard({ proj }) {
             icon={<GitHubIcon size={13} color="currentColor" />}
             label="GITHUB"
           />
-          <ProjBtn
-            href={proj.demo}
-            outlined
-            icon={<ExternalLinkIcon size={12} color="currentColor" />}
-            label="LIVE"
-          />
+          {hasLive && (
+            <ProjBtn
+              href={proj.demo}
+              outlined
+              icon={<ExternalLinkIcon size={12} color="currentColor" />}
+              label="LIVE"
+            />
+          )}
         </div>
       </div>
     </div>
