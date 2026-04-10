@@ -6,7 +6,7 @@ const ROLES = [
   'MCA Graduate',
   'Software Developer',
   'AI / ML Enthusiast',
-  'Data Science',
+  'Data Analystics',
 ];
 
 const PROFILE_IMG = new URL('./kl.jpeg', import.meta.url).href;
@@ -121,7 +121,7 @@ export default function Hero() {
 
             {/* Floating stat chips */}
             {[
-              { label: 'CGPA', val: '8.53/10', style: { top: '5%', right: '-22%' },  c: 'var(--c)' },
+              { label: 'CGPA', val: '8.52/10', style: { top: '5%', right: '-22%' },  c: 'var(--c)' },
               { label: 'Projects', val: '4', style: { bottom: '18%', right: '-22%' }, c: 'var(--p)' },
               { label: 'Internships', val: '3', style: { bottom: '4%', left: '-8%' }, c: 'var(--pk)' },
             ].map((chip, i) => (
@@ -143,7 +143,7 @@ export default function Hero() {
         <div className="ticker-inner">
           {[0, 1, 2, 3].map(i => (
             <span key={i} className="ticker-text">
-              ◈ REACT ◈ NODE.JS ◈ PYTHON ◈ MONGODB ◈ AWS ◈ MACHINE LEARNING ◈ DOCKER ◈ TENSORFLOW ◈ TYPESCRIPT ◈ NEXT.JS  &nbsp;
+              ◈ REACT ◈ NODE.JS ◈ PYTHON ◈ MONGODB ◈ AWS ◈ MACHINE LEARNING ◈ DOCKER ◈ SPRINGBOOT &nbsp;
             </span>
           ))}
         </div>
