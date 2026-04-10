@@ -10,10 +10,10 @@ export const NAV_ITEMS = [
 ];
 
 // ─── SKILLS (using CDN SVG logos) ─────────────────────────────────────────
-// devicons CDN: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/
 const D = (name, file = 'original') =>
   `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${name}/${name}-${file}.svg`;
 const neoscanImg = new URL('./resume.png', import.meta.url).href;
+const portfolioImg = new URL('./portfolio.png', import.meta.url).href;
 export const SKILL_CATEGORIES = [
   {
     title: 'Frontend',
@@ -139,7 +139,7 @@ export const PROJECTS = [
     desc: 'Seven-section single-page app with animated HTML5 Canvas backgrounds (matrix rain, particle nodes, circuit grid) running at 60fps, an AI chatbot, and zero-backend EmailJS contact form.',
     tech: ['React 18', 'Vite', 'HTML5 Canvas', 'EmailJS'],
     color: '#38bdf8',
-    img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80',
+    img: portfolioImg,
     github: 'https://github.com/KungaLegjung',
     demo: 'https://kunga-portfolio.vercel.app',
   },
