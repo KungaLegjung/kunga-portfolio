@@ -109,28 +109,27 @@ export const EDUCATION = [
 // ─── EXPERIENCE ───────────────────────────────────────────────────────────
 export const EXPERIENCE = [
   {
-    yr: 'Jun 2024 – Present',
-    role: 'Full-Stack Development Intern',
-    company: 'TechSprint Solutions · Pune (Remote)',
-    desc: 'Building a SaaS analytics dashboard for 10k+ users using React & Node.js. Integrated REST APIs, optimized DB queries reducing load-time by 35%. Leading a 3-person frontend intern team.',
-    tech: ['React', 'Node.js', 'MongoDB', 'AWS EC2', 'Redis'],
+    yr: 'Nov – Dec 2024',
+    role: 'Software Development Intern',
+    company: 'Gonagoor Technology Solutions Pvt. Ltd · Bengaluru',
+    desc: 'Shipped 3 Java–SQL backend modules for 2 internal teams. Wrote 2 REST API endpoints for data retrieval and update operations. Fixed 5+ backend defects during QA cycles.',
+    tech: ['Java', 'SQL', 'REST APIs', 'Git'],
   },
   {
-    yr: 'Jan – May 2024',
-    role: 'Machine Learning Intern',
-    company: 'DataMinds AI · Bangalore',
-    desc: 'Developed NLP pipeline for sentiment analysis with 91% accuracy. Built data preprocessing scripts handling 500k records/day. Deployed models on AWS SageMaker.',
-    tech: ['Python', 'TensorFlow', 'NLTK', 'AWS SageMaker', 'Pandas'],
+    yr: 'Jun – Sep 2025',
+    role: 'Software Developer Intern',
+    company: 'TechCiti Software Consulting Pvt. Ltd · Bengaluru',
+    desc: 'Delivered 4 backend features into production enterprise modules using Java and SQL. Diagnosed and resolved 10–12 defects across 3 sprints. Refactored 2 REST API workflows and conducted weekly code reviews across 4 modules.',
+    tech: ['Java', 'SQL', 'REST APIs', 'Git'],
   },
   {
-    yr: 'May – Jul 2023',
-    role: 'Web Development Intern',
-    company: 'Infosys BPM · Pune',
-    desc: 'Built internal employee portal with RBAC. Developed 12 RESTful API endpoints. Achieved 80% unit-test coverage. Received the "Best Intern" award 🏆.',
-    tech: ['Angular', 'Java Spring', 'MySQL', 'JUnit'],
+    yr: 'Dec 2025 – Feb 2026',
+    role: 'Data Visualization Intern',
+    company: 'Infosys Springboard · Remote',
+    desc: 'Built 2 Power BI dashboards with 8+ charts and 5 KPIs tracking IT support across 4 countries. Ran EDA on ticket volume, SLA, and resolution trends. Verified CSV/JSON datasets using Power Query and Excel.',
+    tech: ['Power BI', 'DAX', 'Excel', 'Power Query', 'GitHub'],
   },
 ];
-
 // ─── PROJECTS ─────────────────────────────────────────────────────────────
 export const PROJECTS = [
   {
