@@ -151,7 +151,7 @@ export const PROJECTS = [
     color: '#34d399',
     img: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80',
     github: 'https://github.com/KungaLegjung/Framework-for-Identification-and-Analysis-of-Tourist-Transport-Data.git',
-    demo: '#',
+    
   },
   {
     title: 'IT Support Analytics Dashboard',
