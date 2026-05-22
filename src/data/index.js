@@ -129,6 +129,13 @@ export const EXPERIENCE = [
     desc: 'Built 2 Power BI dashboards with 8+ charts and 5 KPIs tracking IT support across 4 countries. Ran EDA on ticket volume, SLA, and resolution trends. Verified CSV/JSON datasets using Power Query and Excel.',
     tech: ['Power BI', 'DAX', 'Excel', 'Power Query', 'GitHub'],
   },
+  {
+    yr: 'May 2026 – Present',
+    role: 'Laravel Developer Intern',
+    company: 'Monlam AI · Onsite',
+    desc: 'Beginning Laravel development internship in May 2026.',
+    tech: ['Laravel', 'Next JS', 'CRUD', 'PHP', 'PostgreSQL'],
+  },
 ];
 // ─── PROJECTS ─────────────────────────────────────────────────────────────
 export const PROJECTS = [

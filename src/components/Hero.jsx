@@ -83,8 +83,8 @@ export default function Hero() {
             </button>
           </div>
         </div>
-
-        {/* ── RIGHT — Profile ── */}
+        
+      {/* ── RIGHT — Profile ── */}
         <div className="hero-right">
           <div style={{ position: 'relative', animation: 'float 4s ease-in-out infinite', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             {/* Rotating rings */}
