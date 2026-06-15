@@ -54,7 +54,7 @@ const CONTACT_LINKS = [
   { lbl: 'EMAIL',    val: 'kungalegjung2014@gmail.com',      c: 'var(--c)',  href: 'mailto:kungalegjung2014@gmail.com' },
   { lbl: 'LINKEDIN', val: 'linkedin.com/in/kungalegjung', c: 'var(--p)',  href: 'https://linkedin.com/in/kungalegjung' },
   { lbl: 'GITHUB',   val: 'github.com/KungaLegjung',            c: 'var(--g)',  href: 'https://github.com/KungaLegjung' },
-  { lbl: 'PHONE',    val: '+91 96065 51526',                 c: 'var(--pk)', href: 'tel:+919606551526' },
+  { lbl: 'PHONE',    val: '+91 7975263171',                 c: 'var(--pk)', href: 'tel:+919606551526' },
 ];
 
 export default function Contact() {
