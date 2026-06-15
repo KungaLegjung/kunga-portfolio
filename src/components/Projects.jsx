@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import ParticleBg from './ParticleBg.jsx';
 import { SecHeader, TechPill } from './UI.jsx';
 import { PROJECTS } from '../data/index.js';
 
@@ -23,36 +22,35 @@ function ExternalLinkIcon({ size = 14, color = 'currentColor' }) {
 }
 
 /* ── Project Link Button ─────────────────────────────────────────────────── */
-function ProjBtn({ href, icon, label, accentColor, outlined = false }) {
+function ProjBtn({ href, icon, label, outlined = false }) {
   const [hov, setHov] = useState(false);
 
-  const base = {
+  const baseStyle = {
     display: 'inline-flex',
     alignItems: 'center',
-    gap: 7,
-    fontFamily: 'var(--mono)',
-    fontSize: 9,
-    letterSpacing: 2,
+    gap: 6,
+    fontSize: 12,
+    fontWeight: 600,
     padding: '6px 14px',
     textDecoration: 'none',
     cursor: 'pointer',
-    transition: 'all .25s',
-    clipPath: 'polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%)',
+    transition: 'all 0.2s',
+    borderRadius: '6px',
     userSelect: 'none',
   };
 
   const githubStyle = {
-    ...base,
-    border: `.5px solid ${hov ? accentColor : 'rgba(200,220,255,.28)'}`,
-    color: hov ? accentColor : 'rgba(200,220,255,.65)',
-    background: hov ? `${accentColor}14` : 'transparent',
+    ...baseStyle,
+    border: `1px solid ${hov ? 'var(--p)' : 'var(--border)'}`,
+    color: hov ? '#fff' : '#94a3b8',
+    background: hov ? 'var(--p)' : 'transparent',
   };
 
   const liveStyle = {
-    ...base,
-    border: `.5px solid ${hov ? '#fff' : 'rgba(200,220,255,.18)'}`,
-    color: hov ? '#fff' : 'rgba(200,220,255,.45)',
-    background: hov ? 'rgba(255,255,255,.07)' : 'transparent',
+    ...baseStyle,
+    border: `1px solid ${hov ? '#fff' : 'var(--border)'}`,
+    color: hov ? '#fff' : '#94a3b8',
+    background: hov ? 'rgba(255, 255, 255, 0.05)' : 'transparent',
   };
 
   return (
@@ -72,95 +70,57 @@ function ProjBtn({ href, icon, label, accentColor, outlined = false }) {
 
 /* ── Project Card ────────────────────────────────────────────────────────── */
 function ProjectCard({ proj }) {
-  const [hov, setHov]       = useState(false);
   const [imgErr, setImgErr] = useState(false);
-
   const hasLive = proj.demo && proj.demo !== '#';
 
   return (
-    <div
-      className="proj-card glass-card clip-all"
-      onMouseEnter={() => setHov(true)}
-      onMouseLeave={() => setHov(false)}
-      style={{
-        borderColor: hov ? proj.color : 'rgba(244,63,94,.15)',
-        boxShadow: hov
-          ? `0 22px 46px rgba(0,0,0,.55), 0 0 30px ${proj.color}20`
-          : 'none',
-      }}
-    >
+    <div className="proj-card glass-card">
       {/* ── Image ── */}
       <div className="proj-img-wrap">
-        {!imgErr
-          ? (
-            <img
-              src={proj.img}
-              alt={proj.title}
-              onError={() => setImgErr(true)}
-            />
-          )
-          : (
-            <div style={{
-              width: '100%', height: '100%',
-              background: 'linear-gradient(135deg,#050f20,#0a1a3a)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 44, opacity: .25,
-            }}>🖥️</div>
-          )
-        }
+        {!imgErr ? (
+          <img
+            src={proj.img}
+            alt={proj.title}
+            onError={() => setImgErr(true)}
+          />
+        ) : (
+          <div style={{
+            width: '100%', height: '100%',
+            background: 'var(--bg3)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontSize: 40, opacity: .4,
+          }}>🖥️</div>
+        )}
 
         {/* bottom fade */}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,transparent 15%,rgba(5,11,20,.97) 100%)' }} />
-
-        {/* hover grid */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: 'linear-gradient(rgba(56,189,248,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.04) 1px,transparent 1px)',
-          backgroundSize: '28px 28px',
-          opacity: hov ? 1 : 0, transition: 'opacity .4s',
-        }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 50%, rgba(17, 24, 39, 0.95) 100%)' }} />
 
         {/* type badge */}
         <span style={{
-          position: 'absolute', top: 10, right: 10,
-          fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: 2,
-          padding: '3px 10px',
-          border: `.5px solid ${proj.color}`,
+          position: 'absolute', top: 12, right: 12,
+          fontSize: 10, fontWeight: 600,
+          padding: '3px 8px',
+          borderRadius: '4px',
+          border: `1px solid ${proj.color}40`,
           color: proj.color,
-          background: `${proj.color}18`,
-          clipPath: 'polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%)',
+          background: 'rgba(17, 24, 39, 0.8)',
         }}>
           {proj.type}
         </span>
-
-        {/* hover scan line */}
-        {hov && (
-          <div style={{
-            position: 'absolute', inset: 0,
-            background: `linear-gradient(180deg,transparent 40%,${proj.color}05 50%,transparent 60%)`,
-            animation: 'scanline 1.6s linear infinite',
-          }} />
-        )}
       </div>
 
       {/* ── Body ── */}
-      <div style={{ padding: '16px 20px 22px' }}>
-        <h3 style={{
-          fontFamily: 'var(--orb)', fontSize: 13, fontWeight: 700,
-          color: '#fff', marginBottom: 7,
-        }}>
+      <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+        <h3 style={{ fontSize: 16, fontWeight: 700, color: '#fff', marginBottom: 8 }}>
           {proj.title}
         </h3>
 
-        <p style={{
-          fontSize: 12, lineHeight: 1.65,
-          color: 'rgba(200,220,255,.46)', marginBottom: 14,
-        }}>
+        <p style={{ fontSize: 13, lineHeight: 1.6, color: '#94a3b8', marginBottom: 16, flex: 1 }}>
           {proj.desc}
         </p>
 
         {/* Tech pills */}
-        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 18 }}>
+        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 20 }}>
           {proj.tech.map(t => <TechPill key={t} label={t} />)}
         </div>
 
@@ -168,16 +128,15 @@ function ProjectCard({ proj }) {
         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
           <ProjBtn
             href={proj.github}
-            accentColor={proj.color}
-            icon={<GitHubIcon size={13} color="currentColor" />}
-            label="GITHUB"
+            icon={<GitHubIcon size={14} color="currentColor" />}
+            label="GitHub"
           />
           {hasLive && (
             <ProjBtn
               href={proj.demo}
               outlined
-              icon={<ExternalLinkIcon size={12} color="currentColor" />}
-              label="LIVE"
+              icon={<ExternalLinkIcon size={13} color="currentColor" />}
+              label="Live Demo"
             />
           )}
         </div>
@@ -190,9 +149,8 @@ function ProjectCard({ proj }) {
 export default function Projects() {
   return (
     <section className="section" id="projects">
-      <ParticleBg type="dna" />
       <div className="section-inner">
-        <SecHeader num="// 04" title="PRO" hl="JECTS" />
+        <SecHeader num="04" title="PRO" hl="JECTS" />
         <div className="proj-grid">
           {PROJECTS.map((p, i) => <ProjectCard key={i} proj={p} />)}
         </div>

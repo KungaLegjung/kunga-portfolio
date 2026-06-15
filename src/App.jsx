@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Cursor, Navbar } from './components/UI.jsx';
+import { Navbar } from './components/UI.jsx';
 import Hero from './components/Hero.jsx';
 import { About, Education, Skills, Experience } from './components/Sections.jsx';
 import Projects from './components/Projects.jsx';
@@ -22,7 +22,6 @@ export default function App() {
 
   return (
     <>
-      <Cursor />
       <Navbar active={active} />
 
       <main>
@@ -37,21 +36,21 @@ export default function App() {
 
       <footer style={{
         background: 'var(--bg)',
-        borderTop: '.5px solid rgba(0,255,231,.07)',
-        padding: '18px 56px',
+        borderTop: '1px solid var(--border)',
+        padding: '24px 40px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         flexWrap: 'wrap',
         gap: 12,
       }}>
-        <span style={{ fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: 3, color: 'rgba(200,220,255,.22)' }}>
+        <span style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: 1, color: 'rgba(200,220,255,.22)' }}>
           © 2026 KUNGA LEGJUNG · MCA PORTFOLIO
         </span>
-        <span style={{ fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: 3, color: 'rgba(200,220,255,.22)' }}>
+        <span style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: 1, color: 'rgba(200,220,255,.22)' }}>
           BUILT WITH REACT · VITE · EMAILJS
         </span>
-        <span style={{ fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: 2, color: 'rgba(0,255,231,.3)' }}>
+        <span style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: 1, color: 'rgba(99,102,241,.4)' }}>
           ALL SYSTEMS OPERATIONAL ◈
         </span>
       </footer>
